@@ -61,6 +61,7 @@ export default class AddNote extends Component {
               name="noteName"
               id="noteName"
               placeholder="ex: Awesome Note"
+              required
             />{' '}
           </label>
           <div>
