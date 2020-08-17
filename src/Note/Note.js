@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
 import ApiContext from '../ApiContext';
@@ -17,6 +17,7 @@ export default class Note extends React.Component {
   handleClickDelete = (e) => {
     e.preventDefault();
     const noteId = this.props.id;
+    console.log('Delete clicked!');
 
     fetch(`${config.API_ENDPOINT}/notes/${noteId}`, {
       method: 'DELETE',
@@ -45,12 +46,12 @@ export default class Note extends React.Component {
         <h2 className="Note__title">
           <Link to={`/note/${id}`}>{name}</Link>
         </h2>
-        <button
+        {/*<button
           className="Note__delete"
           type="button"
           onClick={this.handleClickDelete}>
           <FontAwesomeIcon icon="trash-alt" /> remove
-        </button>
+        </button>*/}
         <div className="Note__dates">
           <div className="Note__dates-modified">
             Modified{' '}
