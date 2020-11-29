@@ -16,8 +16,9 @@ export default function NavCircleButton(props) {
 }
 
 NavCircleButton.propTypes = {
-  className: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  tag: PropTypes.elementType.isRequired,
+  className: PropTypes.string,
+  children: PropTypes.node
 }
 
 NavCircleButton.defaultProps ={

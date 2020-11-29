@@ -1,8 +1,8 @@
-import React from 'react'
-import NotefulForm from '../NotefulForm/NotefulForm.js'
-import config from '../config.js'
-import ApiContext from '../ApiContext.js'
-import PropTypes from 'prop-types'
+import React from 'react';
+import NotefulForm from '../NotefulForm/NotefulForm.js';
+import config from '../config.js';
+import ApiContext from '../ApiContext.js';
+import PropTypes from 'prop-types';
 
 export default class AddFolder extends React.Component {
   static contextType = ApiContext;
@@ -30,6 +30,7 @@ export default class AddFolder extends React.Component {
   }
 }
 
-AddFolder.propTypes = {
+addFolder.propTypes = {
+  tag: PropTypes.elementType.isRequired,
   history: PropTypes.string.isRequired
 }

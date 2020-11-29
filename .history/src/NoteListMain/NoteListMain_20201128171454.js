@@ -60,6 +60,7 @@ NoteListMain.propTypes = {
 }
 
 // NoteListMain.propTypes = {
+//   tag: PropTypes.elementType.isRequired,
 //   match: PropTypes.shape.isRequired,
 //   params: PropTypes.shape.isRequired,
 //   folderId: PropTypes.string.isRequired

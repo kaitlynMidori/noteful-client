@@ -45,11 +45,11 @@ export default class NotePageNav extends React.Component {
 }
 
 NotePageNav.propTypes = {
-  history: PropTypes.shape({
-    goBack: PropTypes.func.isRequired
+  history: PropTypes.shape.isRequired({
+    goBack: PropTypes.func.
   }),
-  match: PropTypes.shape({
-    params: PropTypes.shape({
+  match: PropTypes.shape.isRequired({
+    params: PropTypes.shape.isRequired({
       noteId: PropTypes.string.isRequired
     })
   })

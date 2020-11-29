@@ -46,13 +46,13 @@ NotePageMain.propTypes = {
     })
   }),
   history: PropTypes.shape({
-    push: PropTypes.func.isRequired
+    push: PropTypes.func
   })
 }
 
-// NotePageMain.propTypes = {
-//   tag: PropTypes.elementType.isRequired,
-//   match: PropTypes.shape.isRequired,
-//   params: PropTypes.shape.isRequired,
-//   noteId: PropTypes.string.isRequired
-// }
+NotePageMain.propTypes = {
+  tag: PropTypes.elementType.isRequired,
+  match: PropTypes.shape.isRequired,
+  params: PropTypes.shape.isRequired,
+  noteId: PropTypes.string.isRequired
+}

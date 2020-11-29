@@ -54,13 +54,13 @@ export default class NoteListMain extends React.Component {
 NoteListMain.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      folderId: PropTypes.string.isRequired
+      folderId: PropTypes.string
     })
   })
 }
 
-// NoteListMain.propTypes = {
-//   match: PropTypes.shape.isRequired,
-//   params: PropTypes.shape.isRequired,
-//   folderId: PropTypes.string.isRequired
-// }
+NoteListMain.propTypes = {
+  tag: PropTypes.elementType.isRequired,
+  match: PropTypes.shape.isRequired,
+  params: PropTypes.sh.isRequired
+}

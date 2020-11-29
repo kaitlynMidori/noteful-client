@@ -61,5 +61,6 @@ export default class AddNote extends React.Component {
 }
 
 AddNote.propTypes = {
+  tag: PropTypes.elementType.isRequired,
   history: PropTypes.string.isRequired
 }
