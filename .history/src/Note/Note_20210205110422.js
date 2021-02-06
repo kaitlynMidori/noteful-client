@@ -85,6 +85,7 @@ export default class Note extends React.Component {
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import './Note.css'
 
+
 // export default function Note(props) {
 //   return (
 //     <div className='Note'>
@@ -103,7 +104,7 @@ export default class Note extends React.Component {
 //           Modified
 //           {' '}
 //           <span className='Date'>
-//             {format(props.modified, 'yyyy mm dd')}
+//             {format(props.modified, 'mm/dd/yyyy')}
 //           </span>
 //         </div>
 //       </div>
