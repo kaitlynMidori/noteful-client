@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,35 +11,47 @@ import ApiContext from '../ApiContext'
 import config from '../config'
 import './App.css'
 
-class App extends Component {
-  state = {
-    notes: [],
-    folders: [],
-  };
-
-  componentDidMount() {
-    Promise.all([
-      fetch(`${config.API_ENDPOINT}/notes`),
-      fetch(`${config.API_ENDPOINT}/folders`)
-    ])
-      .then(([notesRes, foldersRes]) => {
-        if (!notesRes.ok)
-          return notesRes.json().then(e => Promise.reject(e))
-        if (!foldersRes.ok)
-          return foldersRes.json().then(e => Promise.reject(e))
-
-        return Promise.all([
-          notesRes.json(),
-          foldersRes.json(),
-        ])
-      })
-      .then(([notes, folders]) => {
-        this.setState({ notes, folders })
-      })
-      .catch(error => {
-        console.error({ error })
-      })
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      notes: [],
+      folders: [],
+      loading: false,
+      error: null,
+      updateMessage: null
+    }
   }
+
+  componentDidMount = () => {
+    this.setState({ loading: true })
+
+      Promise.all([
+        fetch(`${config.API_ENDPOINT}/notes`),
+        fetch(`${config.API_ENDPOINT}/folders`)
+      ])
+        .then(([notesRes, foldersRes]) => {
+          if (!notesRes.ok)
+            return notesRes.json().then(e => Promise.reject(e))
+          if (!foldersRes.ok)
+            return foldersRes.json().then(e => Promise.reject(e))
+  
+          return Promise.all([
+            notesRes.json(),
+            foldersRes.json(),
+          ])
+        })
+        .then(([notes, folders]) => {
+          this.setState({ 
+            notes, folders, 
+            loading: false
+        })
+        })
+        .catch(error => {
+          this.setState({ 
+            error: error.message })
+        })
+    }
 
   handleAddFolder = folder => {
     this.setState({
@@ -151,7 +162,6 @@ class App extends Component {
 }
 
 export default App
-
 
 // import { BrowserRouter, Route } from 'react-router-dom';
 // import config from './config';

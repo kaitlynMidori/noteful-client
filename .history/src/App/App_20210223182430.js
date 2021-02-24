@@ -9,7 +9,7 @@ import NotePageMain from '../NotePageMain/NotePageMain'
 import AddFolder from '../AddFolder/AddFolder'
 import AddNote from '../AddNote/AddNote'
 import ApiContext from '../ApiContext'
-import config from '../config'
+import config from './config'
 import './App.css'
 
 class App extends Component {
