@@ -29,7 +29,7 @@ export default class NoteListMain extends React.Component {
               <li key={note.id}>
                 <Note
                   id={note.id}
-                  name={note.note_name}
+                  name={note.name}
                   modified={note.modified}
                 />
               </li>
