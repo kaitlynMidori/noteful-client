@@ -20,14 +20,14 @@ describe(`AddNote component`, () => {
   ]
   
 
-  // it('renders the complete form', () => {
-  //   const wrapper = shallow(<AddNote />)
-  //   expect(toJson(wrapper)).toMatchSnapshot()
-  // })
-
-  it('renders the select options from folders', () => {
-    const select = shallow(<AddNote folders={stubFolders} />)
-      .find('#note-folder-select')
-    expect(toJson(select)).toMatchSnapshot()
+  it('renders the complete form', () => {
+    const wrapper = shallow(<AddNote />)
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
+
+  // it('renders the select options from folders', () => {
+  //   const select = shallow(<AddNote folders={stubFolders} />)
+  //     .find('#note-folder-select')
+  //   expect(toJson(select)).toMatchSnapshot()
+  // })
 })

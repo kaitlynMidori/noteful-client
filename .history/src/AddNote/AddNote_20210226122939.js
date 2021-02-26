@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import NotefulForm from '../NotefulForm/NotefulForm'
+
 import ApiContext from '../ApiContext';
 import config from '../config';
-
 
 export default class AddNote extends Component {
   constructor(props) {
@@ -53,7 +52,7 @@ export default class AddNote extends Component {
 
   render() {
     return (
-      <NotefulForm onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <fieldset>
           <label>
             Note Name:
@@ -91,7 +90,7 @@ export default class AddNote extends Component {
           </label>
           <input type="submit" value="Submit" />
         </fieldset>
-      </NotefulForm>
+      </form>
     );
   }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NotefulForm from '../NotefulForm/NotefulForm'
 import ApiContext from '../ApiContext';
 import config from '../config';
-
+import PropTypes from 'prop-types';
 
 export default class AddNote extends Component {
   constructor(props) {
@@ -94,4 +94,8 @@ export default class AddNote extends Component {
       </NotefulForm>
     );
   }
+}
+
+AddNote.propTypes = {
+  history: PropTypes.string.isRequired
 }
