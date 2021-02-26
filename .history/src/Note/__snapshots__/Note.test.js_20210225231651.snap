@@ -8,7 +8,7 @@ exports[`Note component renders a .Note by default 1`] = `
     className="Note__title"
   >
     <Link
-      to="/note/undefined"
+      to="/note/api"
     />
   </h2>
   <button

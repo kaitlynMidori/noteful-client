@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import ApiContext from '../ApiContext';
 import config from '../config';
@@ -41,7 +41,7 @@ export default class Note extends React.Component {
     const { name, id, modified } = this.props;
     return (
       <div className="Note">
-        <h2 className="Note__title">
+        <h2 className="Note_title">
           <Link to={`/note/${id}`}>{name}</Link>
         </h2>
         <button
@@ -61,4 +61,8 @@ export default class Note extends React.Component {
   }
 }
 
-
+Note.propTypes = {
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  // modified: PropTypes.string.isRequired
+};

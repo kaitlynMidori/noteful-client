@@ -39,8 +39,8 @@ describe(`Note component`, () => {
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
-  // it('renders the .Note given props', () => {
-  //   const wrapper = shallow(<Note {...props} />)
-  //   expect(toJson(wrapper)).toMatchSnapshot()
-  // })
+  it('renders the .Note given props', () => {
+    const wrapper = shallow(<Note {...props} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
 })

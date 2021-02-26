@@ -29,8 +29,8 @@ import Note from './Note'
 
 describe(`Note component`, () => {
   const props = {
-    id: 'a',
-    name: 'test-class-name',
+    id: '1',
+    name: 'note name',
     modified: new Date(2021, 12, 15),
   }
 
