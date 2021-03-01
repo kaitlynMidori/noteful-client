@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
-
 export default class AddNote extends Component {
   constructor(props) {
     super(props);

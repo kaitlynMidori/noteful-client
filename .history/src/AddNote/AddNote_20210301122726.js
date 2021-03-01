@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
-
 export default class AddNote extends Component {
   constructor(props) {
     super(props);
@@ -80,7 +79,7 @@ export default class AddNote extends Component {
           <label>
             Folder:
             <select name="folder" id="folder">
-              {this.context.folders.map((folder) => {
+              {this.context.folders.map((folders) => {
                 return (
                   <option key={`note-option-${folder.id}`} value={folder.id}>
                     {folder.folder_name}

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
-
 export default class AddNote extends Component {
   constructor(props) {
     super(props);
@@ -11,11 +10,18 @@ export default class AddNote extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // export default class AddNote extends Component {
   static defaultProps = {
     history: {
-      goBack: () => {},
+      push: () => { }
     },
-  };
+  }
+
+  // static defaultProps = {
+  //   history: {
+  //     goBack: () => {},
+  //   },
+  // };
 
   static contextType = ApiContext;
 

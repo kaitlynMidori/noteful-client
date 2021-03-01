@@ -3,19 +3,43 @@ import React, { Component } from 'react';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
+// export default class AddNote extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { value: '' };
+//     this.handleSubmit = this.handleSubmit.bind(this);
+//   }
+
+//   static defaultProps = {
+//     history: {
+//       goBack: () => {},
+//     },
+//   };
 
 export default class AddNote extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: '' };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
   static defaultProps = {
     history: {
-      goBack: () => {},
+      push: () => { }
     },
-  };
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: {
+        value: '',
+        touched: false,
+      },
+      content: {
+        value: '',
+        touched: false,
+      },
+      folderId: {
+        value: '',
+        touched: false,
+      }
+    }
+  }
 
   static contextType = ApiContext;
 

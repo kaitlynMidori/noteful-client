@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
-
 export default class AddNote extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +23,7 @@ export default class AddNote extends Component {
     const target = e.target,
       name = target.noteName.value,
       content = target.content.value,
-      folder = target.folder.value,
+      folder = target.folders.value,
       myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
 
